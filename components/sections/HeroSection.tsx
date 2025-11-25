@@ -1,68 +1,147 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const trustBadges = [
+  "AEO Accreditation · In Progress",
+  "Customs Level II",
+  "Best Taxpayer Award",
+  "Exclusive KRYSTER & BERKLAYS Agent",
+];
+
+const stats = [
+  { value: "10+", label: "Years of operations" },
+  { value: "4", label: "Integrated divisions" },
+  { value: "25+", label: "International partners" },
+  { value: "8", label: "Global trade routes" },
+];
+
+const tradeDestinations = ["France", "Turkey", "China", "UAE", "Germany", "Korea", "Italy", "Spain"];
+
 export function HeroSection() {
   return (
-    <section className="grid items-center gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]" id="top">
-      <div className="space-y-6">
-        <p className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
-          Trust · Integrity · Professionalism
-        </p>
-        <h1 className="text-balance text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-          Ethiopian agro-commodities &amp; quality imports, trusted worldwide.
-        </h1>
-        <p className="max-w-xl text-sm text-gray-600 sm:text-base">
-          Afro Addis is a diversified trading and manufacturing group, specializing in premium coffee, pulses,
-          oilseeds, selected household appliances, and high-quality furniture.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="/#contact"
-            className="inline-flex items-center justify-center bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-800"
-          >
-            Work with us
-          </a>
-          <a
-            href="/#about"
-            className="inline-flex items-center justify-center border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-800 transition-colors hover:border-gray-400 hover:bg-gray-50"
-          >
-            Learn more about us
-          </a>
+    <section id="top" className="relative overflow-hidden bg-[#0f172a] text-white shadow-2xl shadow-emerald-900/20">
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(236,187,82,0.25),_transparent_50%),_radial-gradient(circle_at_bottom,_rgba(16,185,129,0.2),_transparent_50%)]" />
+        <div className="hero-carousel absolute inset-0 mix-blend-soft-light">
+          {[
+            "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1600&q=80",
+          ].map((src, index) => (
+            <div
+              key={src}
+              className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-[2500ms]"
+              style={{
+                backgroundImage: `url(${src})`,
+                animation: `heroFade 18s infinite`,
+                animationDelay: `${index * 6}s`,
+              }}
+            />
+          ))}
         </div>
-        <dl className="mt-4 grid gap-6 text-sm text-gray-700 sm:grid-cols-3">
-          <div>
-            <dt className="font-semibold text-gray-900">Coffee &amp; Pulses</dt>
-            <dd className="text-gray-600">Sourced from trusted Ethiopian farmers and cooperatives.</dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-gray-900">Global Export</dt>
-            <dd className="text-gray-600">Reliable partners for international buyers and roasters.</dd>
-          </div>
-          <div>
-            <dt className="font-semibold text-gray-900">Integrated Group</dt>
-            <dd className="text-gray-600">From agro-commodities to appliances and furniture.</dd>
-          </div>
-        </dl>
       </div>
 
-      <div className="grid gap-4 rounded-3xl border border-gray-100 bg-gradient-to-br from-emerald-50/70 via-white to-amber-50/80 p-5 shadow-sm sm:p-6">
-        <div className="grid grid-cols-2 gap-3 text-xs sm:text-sm">
-          <div className="rounded-2xl bg-white/70 p-4 shadow-sm">
-            <p className="text-[11px] font-medium uppercase tracking-wide text-emerald-700">Pulses</p>
-            <p className="mt-1 text-gray-800">Chickpeas · Lentils · Beans</p>
-            <p className="mt-2 text-[11px] text-gray-500">High-quality Ethiopian pulses for global markets.</p>
+      <div className="relative grid items-stretch gap-12 px-6 py-12 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)] sm:px-10 sm:py-16 lg:px-16">
+        <div className="space-y-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200">
+            Afro Addis Group · Ethiopia
           </div>
-          <div className="rounded-2xl bg-white/70 p-4 shadow-sm">
-            <p className="text-[11px] font-medium uppercase tracking-wide text-amber-700">Coffee</p>
-            <p className="mt-1 text-gray-800">Natural · Washed · Honey</p>
-            <p className="mt-2 text-[11px] text-gray-500">Carefully processed for consistent cup quality.</p>
+          <div className="space-y-4">
+            <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Empowering global trade from Ethiopia to the world.
+            </h1>
+            <p className="max-w-2xl text-base text-slate-100 sm:text-lg">
+              A multi-sector enterprise scaling import, export, manufacturing, coffee trade, and household retail
+              programs with governance built for international partners.
+            </p>
           </div>
-          <div className="rounded-2xl bg-white/70 p-4 shadow-sm">
-            <p className="text-[11px] font-medium uppercase tracking-wide text-sky-700">Export</p>
-            <p className="mt-1 text-gray-800">Sesame · Coffee · Pulses</p>
-            <p className="mt-2 text-[11px] text-gray-500">Efficient logistics and on-time delivery.</p>
+
+          <div className="flex flex-wrap gap-2">
+            {trustBadges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium text-slate-100"
+              >
+                {badge}
+              </span>
+            ))}
           </div>
-          <div className="rounded-2xl bg-white/70 p-4 shadow-sm">
-            <p className="text-[11px] font-medium uppercase tracking-wide text-slate-700">Import &amp; Furniture</p>
-            <p className="mt-1 text-gray-800">Appliances · Furniture</p>
-            <p className="mt-2 text-[11px] text-gray-500">Trusted brands and durable manufacturing.</p>
+
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/divisions"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:scale-[1.01]"
+            >
+              Explore our divisions
+            </Link>
+            <Link
+              href="/resources#downloads"
+              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Download company profile
+            </Link>
+          </div>
+
+          <dl className="grid gap-5 text-sm text-white/80 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="text-xs uppercase tracking-[0.35em] text-white/60">{stat.label}</dt>
+                <dd className="mt-2 text-2xl font-semibold text-white">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <div className="relative grid gap-5">
+          <div className="relative overflow-hidden border border-white/10 bg-white/5 p-5 backdrop-blur">
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1464306076886-da185f6a9d12?auto=format&fit=crop&w=800&q=80",
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+              ].map((src, index) => (
+                <div key={src} className="group relative h-40 overflow-hidden border border-white/10">
+                  <Image
+                    src={src}
+                    alt={`Hero collage ${index}`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 20vw, 45vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-70" />
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 border border-white/10 bg-white/5 p-4">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/70">Integrated capability</p>
+              <p className="mt-2 text-sm text-white/90">Coffee export · Import & retail · Manufacturing · Global logistics</p>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#020817] p-6">
+            <div className="space-y-3">
+              <p className="text-xs uppercase tracking-[0.35em] text-white/60">Global trade routes</p>
+              <p className="text-base text-white/90">Addis Ababa → Key international partners</p>
+            </div>
+            <div className="relative mt-6">
+              <div className="h-48 w-full rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800">
+                <div className="absolute inset-0 opacity-50">
+                  <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/BlankMap-World.svg/1024px-BlankMap-World.svg.png')] bg-contain bg-center bg-no-repeat invert" />
+                </div>
+                <div className="relative flex h-full flex-col justify-between p-4 text-xs text-white/80">
+                  {tradeDestinations.map((destination) => (
+                    <div key={destination} className="flex items-center justify-between border-b border-white/10 py-1 last:border-none">
+                      <span>{destination}</span>
+                      <span className="text-white/60">In transit</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="absolute -bottom-5 left-1/2 w-40 -translate-x-1/2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-xs font-semibold text-white/80 backdrop-blur">
+                Addis Ababa HQ · Bole
+              </div>
+            </div>
           </div>
         </div>
       </div>
