@@ -30,7 +30,7 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative space-y-10 overflow-hidden rounded-[36px] border border-white/70 bg-gradient-to-br from-[#fefbf4] via-white to-[#f4ede3] px-6 py-14 text-gray-900 shadow-2xl shadow-amber-900/10 sm:px-10 lg:px-16"
+      className="relative space-y-10 overflow-hidden rounded-[36px] border border-white/70 bg-linear-to-br from-[#fefbf4] via-white to-[#f4ede3] px-6 py-14 text-gray-900 shadow-2xl shadow-amber-900/10 sm:px-10 lg:px-16"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(249,115,22,0.15),_transparent_55%)] opacity-70" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-12" />
@@ -56,7 +56,7 @@ export function ServicesSection() {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(min-width: 1024px) 30vw, 100vw"
             />
-            <div className={`absolute inset-0 bg-gradient-to-br ${card.overlay}`} />
+            <div className={`absolute inset-0 bg-linear-to-br ${card.overlay}`} />
             <div className="relative flex h-full flex-col justify-between p-6 text-white">
               <div className="space-y-4">
                 <p className="text-xs uppercase tracking-[0.35em] text-white/70">Service</p>

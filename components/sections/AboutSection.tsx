@@ -47,7 +47,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 px-6 py-16 sm:px-8 lg:px-16"
+      className="relative overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100 px-6 py-16 sm:px-8 lg:px-16"
     >
       {/* Background Elements */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.05),transparent_50%)]" />
