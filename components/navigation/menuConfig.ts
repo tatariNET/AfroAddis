@@ -110,32 +110,8 @@ export const megaMenuGroups: MegaMenuGroup[] = [
 },
   {
     label: "Partners & Resources",
-    columns: [
-      {
-        title: "Strategic alliances",
-        items: [
-          { label: "Electronics & appliances", href: "/partners#alliances" },
-          { label: "Furniture & interiors", href: "/partners#alliances" },
-          { label: "Logistics & finance", href: "/partners#enablement" },
-        ],
-      },
-      {
-        title: "Resources",
-        items: [
-          { label: "News & insights", href: "/resources#news" },
-          { label: "Case studies", href: "/resources#news" },
-          { label: "Downloads & media kit", href: "/resources#downloads" },
-        ],
-      },
-      {
-        title: "Engage with us",
-        items: [
-          { label: "Corporate inquiries", href: "/contact" },
-          { label: "Supplier onboarding", href: "/resources#downloads" },
-          { label: "Career opportunities", href: "/about#profile" },
-        ],
-      },
-    ],
+    href: "/partners",
+    columns: [],
   },
 ];
 

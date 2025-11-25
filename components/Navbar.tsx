@@ -132,12 +132,14 @@ export function Navbar() {
                 </div>
               </div>
             ))}
+            
             {primaryLinks.map((link) => (
               <Link key={link.href} href={link.href} className="text-sm font-semibold text-gray-900">
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="rounded-full bg-gray-900 px-5 py-2.5 text-white transition hover:bg-gray-800 hover:shadow-lg">
+            
+            <Link href="/contact" className="rounded bg-red-600 px-5 py-2.5 text-white transition hover:bg-gray-800 hover:shadow-lg">
               Business inquiry
             </Link>
           </nav>

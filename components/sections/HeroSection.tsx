@@ -96,12 +96,13 @@ export function HeroSection() {
           <div className="relative overflow-hidden border border-white/10 bg-white/5 p-5 backdrop-blur">
             <div className="grid gap-3 sm:grid-cols-2">
               {[
+                                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+
                 "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
                 "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1464306076886-da185f6a9d12?auto=format&fit=crop&w=800&q=80",
                 "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
               ].map((src, index) => (
-                <div key={src} className="group relative h-40 overflow-hidden border border-white/10">
+                <div key={index} className="group relative h-40 overflow-hidden border border-white/10">
                   <Image
                     src={src}
                     alt={`Hero collage ${index}`}
