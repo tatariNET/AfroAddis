@@ -10,6 +10,20 @@ export function Navbar() {
   const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
   const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const closeTimeoutRef = useRef<number | null>(null);
+
+  const openMenu = (label: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setOpenDesktopMenu(label);
+  };
+
+  const closeMenuWithDelay = (delay = 180) => {
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    closeTimeoutRef.current = window.setTimeout(() => setOpenDesktopMenu(null), delay);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -26,37 +40,39 @@ export function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+        closeTimeoutRef.current = null;
+      }
     };
   }, [mobileNavOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-300 bg-white/95 backdrop-blur-xl">
       <div ref={containerRef} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-1">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-12 w-12 sm:h-16 sm:w-16">
+            <div className="relative h-16 w-20 sm:h-20 sm:w-24">
               <Image
                 src="/afro_logo.png"
                 alt="Afro Addis logo"
                 fill
-                sizes="64px"
+                sizes="96px"
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl">Afro Addis</span>
+            <span className="text-xl font-semibold tracking-tight text-red-600 sm:text-2xl">KYT TRADING PLC.</span>
           </Link>
 
-          <nav
-            className="hidden items-center gap-6 text-sm font-medium text-gray-600 lg:flex"
-            onMouseLeave={() => setOpenDesktopMenu(null)}
-          >
+          <nav className="hidden items-center gap-6 text-sm font-medium text-gray-600 lg:flex">
             {megaMenuGroups.map((group) => (
               <div
                 key={group.label}
                 className="relative"
-                onMouseEnter={() => setOpenDesktopMenu(group.label)}
-                onFocus={() => setOpenDesktopMenu(group.label)}
+                onMouseEnter={() => openMenu(group.label)}
+                onFocus={() => openMenu(group.label)}
+                onMouseLeave={() => closeMenuWithDelay()}
               >
                 <button
                   type="button"
@@ -73,6 +89,13 @@ export function Navbar() {
                   </svg>
                 </button>
                 <div
+                  onMouseEnter={() => {
+                    if (closeTimeoutRef.current) {
+                      clearTimeout(closeTimeoutRef.current);
+                      closeTimeoutRef.current = null;
+                    }
+                  }}
+                  onMouseLeave={() => closeMenuWithDelay()}
                   className={`absolute left-1/2 top-full z-40 mt-3 w-[min(78vw,960px)] -translate-x-1/2 rounded-3xl border border-gray-100 bg-white/95 p-6 shadow-2xl shadow-gray-900/10 transition ${openDesktopMenu === group.label ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
                     }`}
                 >

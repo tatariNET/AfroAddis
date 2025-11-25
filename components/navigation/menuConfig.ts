@@ -29,7 +29,7 @@ export const megaMenuGroups: MegaMenuGroup[] = [
       {
         title: "Company",
         items: [
-          { label: "Company profile", href: "/about" },
+          { label: "Company profile", href: "#about" },
           { label: "Governance & board", href: "/governance" },
           { label: "Achievements & awards", href: "/achievements" },
         ],
@@ -38,81 +38,76 @@ export const megaMenuGroups: MegaMenuGroup[] = [
         title: "Resources",
         items: [
           { label: "Corporate timeline", href: "/about#timeline" },
-          { label: "Sustainability & CSR", href: "/resources" },
           { label: "News & updates", href: "/resources#news" },
         ],
       },
     ],
-    highlight: {
-      title: "Download corporate profile",
-      description: "Overview of Afro Addis’ governance, verticals, and capabilities.",
-      href: "/resources",
+  },
+ {
+  label: "Services",
+  columns: [
+    {
+      title: "Core Business Services",
+      items: [
+        { label: "Trading", href: "/trading" },
+        { label: "Import & Sourcing", href: "/import" },
+        { label: "Export & Distribution", href: "/export" },
+        { label: "Manufacturing & Production", href: "/manufacturing" },
+      ],
     },
-  },
-  {
-    label: "Divisions",
-    columns: [
-      {
-        title: "Core divisions",
-        items: [
-          { label: "Import division", href: "/import" },
-          { label: "Export division", href: "/export" },
-          { label: "Manufacturing", href: "/manufacturing" },
-        ],
-      },
-      {
-        title: "Consumer & retail",
-        items: [
-          { label: "Household retail & credit", href: "/retail" },
-          { label: "Strategic partners", href: "/partners#alliances" },
-          { label: "After-sales programs", href: "/retail#service" },
-        ],
-      },
-      {
-        title: "Growth initiatives",
-        items: [
-          { label: "Mining & future expansion", href: "/mining#initiatives" },
-          { label: "Vehicle assembly", href: "/mining#initiatives" },
-          { label: "Partnership formats", href: "/mining#partnerships" },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Coffee Export",
-    href: "/coffee",
-    columns: [
-      {
-        title: "Origins",
-        items: [
-          { label: "Sidama & Yirgacheffe", href: "/coffee#origins" },
-          { label: "Guji & Gedeb", href: "/coffee#origins" },
-          { label: "Limu & Jimma", href: "/coffee#origins" },
-        ],
-      },
-      {
-        title: "Processing",
-        items: [
-          { label: "Natural & honey", href: "/coffee#processing" },
-          { label: "Washed & wet-hulled", href: "/coffee#processing" },
-          { label: "QC & cupping lab", href: "/coffee#processing" },
-        ],
-      },
-      {
-        title: "Buyer services",
-        items: [
-          { label: "Documentation & compliance", href: "/coffee#buyer-services" },
-          { label: "Logistics & shipping", href: "/coffee#buyer-services" },
-          { label: "Request samples", href: "/coffee#buyer-services" },
-        ],
-      },
-    ],
-    highlight: {
-      title: "Download coffee portfolio",
-      description: "Regional profiles, processing details, and availability.",
-      href: "/coffee#downloads",
+    {
+      title: "Retail & Consumer Solutions",
+      items: [
+        { label: "Household Retail & Credit", href: "/retail" },
+        { label: "Strategic Partnership Programs", href: "/partners" },
+        { label: "After-Sales Support Services", href: "/service" },
+      ],
     },
+    {
+      title: "Strategic Growth Services",
+      items: [
+        { label: "Mining Industry Solutions", href: "/mining" },
+        { label: "Vehicle Assembly Operations", href: "/assembly" },
+        { label: "Joint Venture Partnerships", href: "/partnerships" },
+      ],
+    },
+  ],
+},
+  {
+  label: "Products",
+  href: "/products", 
+  columns: [
+    {
+      title: "Household Goods",
+      items: [
+        { label: "Home Appliances", href: "/products#appliances" },
+        { label: "Furniture & Decor", href: "/products#furniture" },
+        { label: "Kitchenware", href: "/products#kitchen" },
+      ],
+    },
+    {
+      title: "Electronics & Tech",
+      items: [
+        { label: "Smartphones & Tablets", href: "/products#mobile" },
+        { label: "Computers & Accessories", href: "/products#computers" },
+        { label: "Audio & Video Equipment", href: "/products#av" },
+      ],
+    },
+    {
+      title: "Automotive & Industrial",
+      items: [
+        { label: "Vehicle Parts & Accessories", href: "/products#automotive" },
+        { label: "Machinery & Tools", href: "/products#machinery" },
+        { label: "Building Materials", href: "/products#construction" },
+      ],
+    },
+  ],
+  highlight: {
+    title: "View Full Product Range",
+    description: "Explore our complete import and manufacturing portfolio.",
+    href: "/products#catalog",
   },
+},
   {
     label: "Partners & Resources",
     columns: [
