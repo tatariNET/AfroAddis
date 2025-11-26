@@ -14,40 +14,20 @@ function PartnerLogo({ name, src }: { name: string; src?: string }) {
 
   if (!src || failed) {
     return (
-      <div className="flex items-center justify-center bg-white/90 p-3 shadow-sm">
-        <svg
-          width="120"
-          height="60"
-          viewBox="0 0 120 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="120" height="60" rx="6" fill="#ffffff" />
-          <rect width="120" height="60" rx="6" fill="#f8fafc" />
-          <text
-            x="50%"
-            y="50%"
-            dominantBaseline="middle"
-            textAnchor="middle"
-            fontFamily="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
-            fontSize="20"
-            fill="#1f2937"
-          >
-            {initials}
-          </text>
-        </svg>
+      <div className="flex h-16 items-center justify-center">
+        <span className="text-sm font-semibold text-gray-700">{initials}</span>
       </div>
     );
   }
 
   return (
-    <div className="bg-white/80 p-3 shadow-sm">
+    <div className="flex items-center justify-center h-16">
       <Image
         src={src}
         alt={name}
         width={120}
         height={60}
-        className="object-contain"
+        className="object-contain max-h-12 w-auto"
         onError={() => setFailed(true)}
       />
     </div>
@@ -55,17 +35,12 @@ function PartnerLogo({ name, src }: { name: string; src?: string }) {
 }
 
 const partners = [
-  { id: 1, name: "Samsung", logo: "/samsung.png" },
-  { id: 2, name: "Hisense", logo: "/hisense.png" },
-  { id: 3, name: "LG", logo: "/lg.png" },
-  {
-    id: 4,
-    name: "Kumtel",
-    logo: "/kumtel.png",
-    note: "KYT is the exclusive Ethiopian agent for ARKEMIX, a leading French manufacturer of premium electronics for its KRYSTER and BERKLAYS branded full-range electronics appliances, demonstrating trust from international partners and recognition of our operational excellence.",
-  },
-  { id: 5, name: "Sony", logo: "/sony.png" },
-  { id: 6, name: "Suzuki", logo: "/suzuki.png" },
+  { id: 1, name: "Samsung", logo: "/samsung.svg" },
+  { id: 2, name: "Hisense", logo: "/hisense.svg" },
+  { id: 3, name: "LG", logo: "/lg.svg" },
+
+  { id: 5, name: "Sony", logo: "/sony.svg" },
+  { id: 6, name: "Suzuki", logo: "/suzuki.svg" },
 ];
 
 export function WorkingWithSection() {
@@ -87,8 +62,8 @@ export function WorkingWithSection() {
         </p>
       </div>
 
-      <div className="mx-auto max-w-4xl">
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 items-center">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid items-center justify-items-center gap-6 [grid-template-columns:repeat(auto-fit,minmax(140px,1fr))]">
           {partners.map((p) => (
             <div key={p.id} className="flex items-center justify-center">
               <PartnerLogo name={p.name} src={p.logo} />
