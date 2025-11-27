@@ -15,7 +15,7 @@ const categories = [
       "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80",
     ],
-    href: "/products/household-goods",
+    href: "/products#household",
   },
   {
     key: "electronics",
@@ -28,7 +28,7 @@ const categories = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1510552776732-01acc0fbb2a6?auto=format&fit=crop&w=1200&q=80",
     ],
-    href: "/products/electronics-tech",
+    href: "/products#electronics",
   },
   {
     key: "automotive",
@@ -41,7 +41,7 @@ const categories = [
       "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
     ],
-    href: "/products/automotive-industrial",
+    href: "/products#automotive",
   },
 ];
 
@@ -54,7 +54,6 @@ export function ProductsSection() {
     useEffect(() => {
       start();
       return () => stop();
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const start = (delay = 8000) => {
@@ -109,7 +108,10 @@ export function ProductsSection() {
     }, [cat.images.length]);
 
     return (
-      <div className="group relative flex min-h-[420px] lg:min-h-[380px] flex-col lg:flex-row items-stretch overflow-hidden border border-white/60 bg-white/5 shadow-2xl transition hover:-translate-y-1 hover:shadow-amber-900/30">
+      <div
+        id={cat.key}
+        className="group relative flex min-h-[420px] lg:min-h-[380px] flex-col lg:flex-row items-stretch overflow-hidden border border-white/60 bg-white/5 shadow-2xl transition hover:-translate-y-1 hover:shadow-amber-900/30"
+      >
         <div
           ref={containerRef}
           onMouseEnter={() => stop()}

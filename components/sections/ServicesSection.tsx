@@ -17,7 +17,7 @@ const serviceCards = [
     ],
     overlay: "from-black/70 via-black/30 to-transparent",
     tags: ["Household goods", "Credit retail", "Local manufacturing", "Global partners"],
-    href: "/services/trading",
+    href: "/services#trading",
   },
   {
     key: "import",
@@ -32,7 +32,7 @@ const serviceCards = [
     ],
     overlay: "from-slate-900/80 via-slate-800/60 to-slate-600/40",
     tags: ["Electronics", "Appliances", "After-sales"],
-    href: "/services/import",
+    href: "/services#import",
   },
   {
     key: "export",
@@ -47,7 +47,7 @@ const serviceCards = [
     ],
     overlay: "from-black/80 via-black/40 to-amber-900/30",
     tags: ["Coffee", "Sesame", "Pulses"],
-    href: "/services/export",
+    href: "/services#export",
   },
   {
     key: "manufacturing",
@@ -62,7 +62,7 @@ const serviceCards = [
     ],
     overlay: "from-amber-900/80 via-amber-700/50 to-amber-400/30",
     tags: ["Residential", "Commercial", "Custom build"],
-    href: "/services/manufacturing",
+    href: "/services#manufacturing",
   },
 ];
 
@@ -131,7 +131,10 @@ export function ServicesSection() {
     }, [card.images.length]);
 
     return (
-      <article className="group grid gap-6 rounded-lg border border-white/60 bg-white shadow-sm lg:grid-cols-2">
+      <article
+        id={card.key}
+        className="group grid gap-6 rounded-lg border border-white/60 bg-white shadow-sm lg:grid-cols-2"
+      >
         <div
           ref={containerRef}
           onMouseEnter={() => stop()}
