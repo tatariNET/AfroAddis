@@ -119,7 +119,7 @@ export function Navbar() {
                           <p className="text-xs font-bold uppercase text-red-900 pt-0 underline underline-offset-4">{column.title}</p>
                           <ul className="space-y-1.5">
                             {column.items.map((item) => (
-                              <li key={item.label}>
+                              <li key={item.label }>
                                 <Link
                                   href={item.href}
                                   className="block rounded-xl px-3 py-2 text-left text-sm text-gray-700 transition hover:bg-gray-50 hover:text-gray-900"
