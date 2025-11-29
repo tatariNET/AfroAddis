@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function PartnerLogo({ name, src }: { name: string; src?: string }) {
+function PartnerLogo({ name, src, scale }: { name: string; src?: string; scale?: number }) {
   const [failed, setFailed] = useState(false);
 
   const initials = name
@@ -12,33 +12,43 @@ function PartnerLogo({ name, src }: { name: string; src?: string }) {
     .join("")
     .toUpperCase();
 
+  // fixed box for each partner logo so all logos render at the same size
+  const boxClasses = "h-20 w-36 flex items-center justify-center";
+
   if (!src || failed) {
     return (
-      <div className="flex h-16 items-center justify-center">
+      <div className={`${boxClasses}`}>
         <span className="text-sm font-semibold text-gray-700">{initials}</span>
       </div>
     );
   }
 
   return (
-    <div className="flex items-center justify-center h-16">
-      <Image
-        src={src}
-        alt={name}
-        width={120}
-        height={60}
-        className="object-contain max-h-12 w-auto"
-        onError={() => setFailed(true)}
-      />
+    <div className={`${boxClasses}`}>
+      <div className="relative h-full w-full flex items-center justify-center">
+        <div
+          className="h-full w-full flex items-center justify-center"
+          style={scale && scale > 0 ? { transform: `scale(${scale})`, transformOrigin: 'center' } : undefined}
+        >
+          <Image
+            src={src}
+            alt={name}
+            fill
+            className="object-contain p-1"
+            sizes="120px"
+            onError={() => setFailed(true)}
+          />
+        </div>
+      </div>
     </div>
   );
 }
 
 const partners = [
-  { id: 1, name: "Samsung", logo: "/samsung.svg" },
-  { id: 2, name: "Hisense", logo: "/hisense.svg" },
+  { id: 1, name: "Samsung", logo: "/samsung.svg", scale: 1.25 },
+  { id: 2, name: "Hisense", logo: "/hisense.png", scale: 1.18 },
   { id: 3, name: "LG", logo: "/lg.svg" },
-
+{ id: 4, name: "Kumtel", logo: "/kumtel.png", scale: 1.2 },
   { id: 5, name: "Sony ", logo: "/sony.svg" },
   { id: 6, name: "Suzuki", logo: "/suzuki.svg" },
 ];
