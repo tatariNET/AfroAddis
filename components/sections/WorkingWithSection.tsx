@@ -48,7 +48,7 @@ const partners = [
   { id: 1, name: "Samsung", logo: "/samsung.svg", scale: 1.8 },
   { id: 2, name: "Hisense", logo: "/hisense.png", scale: 2.2 },
   { id: 3, name: "LG", logo: "/lg.svg" , scale: 0.7 },
-{ id: 4, name: "Kumtel", logo: "/kumtel.png", scale: 1.1 },
+{ id: 4, name: "Kumtel", logo: "/kumtel.svg", scale: 1.1 },
   { id: 5, name: "Sony ", logo: "/sony.svg", scale: 0.9 },
   { id: 6, name: "Suzuki", logo: "/suzuki.svg", scale: 0.7},
 ];
