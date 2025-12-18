@@ -125,7 +125,42 @@ export default function PdfFlipbook({
   return (
     <div className="w-screen max-w-full overflow-hidden">
       {loading && (
-        <p className="py-4 text-center text-sm text-gray-600">Loading pages…</p>
+        <div className="mx-auto mt-2 max-w-5xl overflow-hidden rounded-2xl border border-gray-200 bg-white/80 p-6 shadow-sm">
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-red-50/70 via-white to-red-100/60 opacity-70"
+            aria-hidden="true"
+          />
+          <div className="relative space-y-4">
+            <div className="h-4 w-32 rounded-full bg-gray-200/70 animate-pulse" />
+            <div className="h-3 w-56 rounded-full bg-gray-200/70 animate-pulse" />
+            <div className="aspect-[3/4] w-full max-w-4xl self-center overflow-hidden rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50 via-white to-gray-100 shadow-inner">
+              <div className="flex h-full items-center justify-center gap-2 text-sm font-semibold text-gray-500">
+                <svg
+                  className="h-5 w-5 animate-spin text-red-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  />
+                </svg>
+                <span>Loading magazine pages…</span>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
       {error && (
         <p className="py-1 text-center text-sm text-red-600">{error}</p>

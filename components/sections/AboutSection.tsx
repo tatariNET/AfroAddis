@@ -105,8 +105,7 @@ export function AboutSection() {
     >
       {/* Background Elements */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.05),transparent_50%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(45deg,transparent_49%,rgba(120,119,198,0.02)_50%,transparent_51%)] bg-[length:10px_10px]" />
-
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(45deg,transparent_49%,rgba(120,119,198,0.02)_50%,transparent_51%)] bg-size-[10px_10px]" />
 
       <div className="relative mx-auto max-w-7xl">
         {/* Header */}
@@ -206,11 +205,12 @@ export function AboutSection() {
                     <p className="text-sm font-medium opacity-90">
                       {image.caption}
                     </p>
-                    <p className="text-sm font-medium opacity-90">{image.caption}</p>
+                    <p className="text-sm font-medium opacity-90">
+                      {image.caption}
+                    </p>
                   </div>
                 </div>
               ))}
-
 
               {/* Slide Indicators */}
               <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
@@ -218,7 +218,11 @@ export function AboutSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      index === currentSlide
+                        ? "w-8 bg-white"
+                        : "w-2 bg-white/50"
+                    }`}
                   />
                 ))}
               </div>
@@ -283,22 +287,48 @@ export function AboutSection() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50">
-                  <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  <svg
+                    className="h-6 w-6 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                    />
                   </svg>
                 </div>
                 <h4 className="font-semibold text-slate-900">Global Reach</h4>
-                <p className="mt-1 text-sm text-slate-600">20+ countries served</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  20+ countries served
+                </p>
               </div>
 
               <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-50">
-                  <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="h-6 w-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                 </div>
-                <h4 className="font-semibold text-slate-900">Quality Certified</h4>
-                <p className="mt-1 text-sm text-slate-600">ISO standards compliance</p>
+                <h4 className="font-semibold text-slate-900">
+                  Quality Certified
+                </h4>
+                <p className="mt-1 text-sm text-slate-600">
+                  ISO standards compliance
+                </p>
               </div>
             </div>
 
@@ -320,4 +350,3 @@ export function AboutSection() {
     </section>
   );
 }
-

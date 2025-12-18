@@ -70,7 +70,7 @@ export function MagazineCoverThumb({
         </div>
       ) : (
         <div className="flex h-full w-full items-center justify-center text-xs text-gray-500">
-          Loading cover…
+          Loading magazines ...
         </div>
       )}
     </div>
