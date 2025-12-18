@@ -64,7 +64,7 @@ export default function PdfFlipbook({
         if (!containerEl) return;
 
         const calcSize = () => {
-          const w = Math.min(window.innerWidth, 1024);
+          const w = Math.min(window.innerWidth * 0.98, 1280); // use more viewport width
           const h = Math.round(w / aspectRatio);
           return { width: w, height: h };
         };
@@ -124,23 +124,6 @@ export default function PdfFlipbook({
 
   return (
     <div className="w-screen max-w-full overflow-hidden">
-      <div className="flex items-center justify-center gap-3 py-2">
-        <button
-          onClick={prev}
-          className="rounded border px-3 py-1 text-sm disabled:opacity-50"
-          disabled={loading || pageCount <= 1}
-        >
-          Prev
-        </button>
-        <button
-          onClick={next}
-          className="rounded border px-3 py-1 text-sm disabled:opacity-50"
-          disabled={loading || pageCount <= 1}
-        >
-          Next
-        </button>
-      </div>
-
       {loading && (
         <p className="py-4 text-center text-sm text-gray-600">Loading pages…</p>
       )}
@@ -153,8 +136,22 @@ export default function PdfFlipbook({
         </p>
       )}
 
-      <div className="flex justify-center">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-center px-10 py-6 overflow-visible gap-6">
+        <button
+          onClick={prev}
+          className="sticky left-0 top-1/2 -translate-y-1/2 rounded-full border bg-white/95 px-3.5 py-2 text-sm shadow-sm transition hover:bg-white disabled:opacity-50 z-20"
+          disabled={loading || pageCount <= 1}
+        >
+          Prev
+        </button>
         <div ref={containerRef} className="pageflip-container" />
+        <button
+          onClick={next}
+          className="sticky right-0 top-1/2 -translate-y-1/2 rounded-full border bg-white/95 px-3.5 py-2 text-sm shadow-sm transition hover:bg-white disabled:opacity-50 z-20"
+          disabled={loading || pageCount <= 1}
+        >
+          Next
+        </button>
       </div>
 
       <p className="mt-3 text-center text-xs text-gray-500">

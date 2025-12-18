@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
+import { MagazineCoverThumb } from "@/components/magazine/MagazineCoverThumb";
 
 export const dynamic = "force-static";
 
@@ -31,20 +32,21 @@ export default function MagazinesListPage() {
         <span className="font-mono">public/magazines</span>.
       </p>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.length === 0 && <p className="text-gray-500">No PDFs found.</p>}
         {items.map((m) => (
           <Link
             key={m.slug}
             href={m.href}
-            className="block rounded border p-4 hover:bg-gray-50"
+            className="group block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
-            <div className="flex items-center justify-between">
+            <MagazineCoverThumb pdfUrl={`/magazines/${m.slug}.pdf`} title={m.name} />
+            <div className="flex items-center justify-between px-4 py-3">
               <div>
-                <p className="font-semibold">{m.name}</p>
+                <p className="font-semibold text-gray-900">{m.name}</p>
                 <p className="text-xs text-gray-600">PDF</p>
               </div>
-              <span className="text-sm font-medium">Open →</span>
+              <span className="text-sm font-medium text-red-700 group-hover:underline">Open →</span>
             </div>
           </Link>
         ))}
