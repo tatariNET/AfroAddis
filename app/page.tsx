@@ -4,7 +4,6 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProductsSection } from "@/components/sections/ProductsSection";
 import { CollaboratorsSection } from "@/components/sections/CollaboratorsSection";
 import { WorkingWithSection } from "@/components/sections/WorkingWithSection";
-import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <ProductsSection />
       <CollaboratorsSection />
       <WorkingWithSection />
-   
     </div>
   );
 }
