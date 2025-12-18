@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
@@ -67,25 +66,12 @@ function StatItem({ value, label }: { value: string | number; label: string }) {
 
 const featuredImages = [
   {
-    src: "https://images.unsplash.com/photo-15656800194b-41d4b54fd093?auto=format&fit=crop&w=1200&q=80",
-    caption: "Global Distribution Network",
-    caption: "Global Distribution Network",
-  },
-  {
     src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
-    caption: "Quality Assurance Centers",
     caption: "Quality Assurance Centers",
   },
   {
     src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     caption: "Modern Logistics Infrastructure",
-    caption: "Modern Logistics Infrastructure",
-  },
-  {
-    src: "https://images.unsplash.com/photo-15656800194b-41d4b54fd093?auto=format&fit=crop&w=1200&q=80",
-    caption: "International Trade Partnerships",
-  },
-    caption: "International Trade Partnerships",
   },
 ];
 
@@ -94,13 +80,10 @@ const operationHighlights = [
     src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80",
     caption: "Advanced Warehousing",
     description: "State-of-the-art storage facilities with climate control",
-    description: "State-of-the-art storage facilities with climate control",
   },
   {
     src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
     caption: "Supply Chain Excellence",
-    description: "End-to-end logistics management and tracking",
-  },
     description: "End-to-end logistics management and tracking",
   },
 ];
@@ -155,6 +138,7 @@ export function AboutSection() {
                 whose pillars include Trust Integrity and Professionalism (TIP).
                 In all our dealings with stakeholders we ensure consistent
                 quality, delivery time and competitive price.
+              </p>
               <p className="text-lg leading-relaxed text-slate-700">
                 KYT Trading PLC is a legally registered business in Ethiopia
                 under the laws of the Federal Democratic Republic of Ethiopia.
@@ -201,7 +185,7 @@ export function AboutSection() {
             </div>
 
             {/* Main Image Slider */}
-            <div className="relative h-96 sm:h-[28rem] overflow-hidden bg-slate-200 shadow-xl">
+            <div className="relative h-96 sm:h-112 overflow-hidden bg-slate-200 shadow-xl">
               {featuredImages.map((image, index) => (
                 <div
                   key={`${image.src}-${index}`}
@@ -222,9 +206,7 @@ export function AboutSection() {
                     <p className="text-sm font-medium opacity-90">
                       {image.caption}
                     </p>
-                    <p className="text-sm font-medium opacity-90">
-                      {image.caption}
-                    </p>
+                    <p className="text-sm font-medium opacity-90">{image.caption}</p>
                   </div>
                 </div>
               ))}
@@ -236,14 +218,7 @@ export function AboutSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide
-                        ? "w-8 bg-white"
-                        : "w-2 bg-white/50"
-                      index === currentSlide
-                        ? "w-8 bg-white"
-                        : "w-2 bg-white/50"
-                    }`}
+                    className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"}`}
                   />
                 ))}
               </div>
@@ -269,6 +244,7 @@ export function AboutSection() {
                   </p>
                 </div>
               </div>
+            </div>
             {/* Operation Highlights Grid */}
             <div className="grid gap-6">
               {operationHighlights.map((highlight, index) => (
@@ -307,81 +283,22 @@ export function AboutSection() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-50">
-                  <svg
-                    className="h-6 w-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                    />
-                  <svg
-                    className="h-6 w-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                    />
+                  <svg className="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                   </svg>
                 </div>
                 <h4 className="font-semibold text-slate-900">Global Reach</h4>
-                <p className="mt-1 text-sm text-slate-600">
-                  20+ countries served
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  20+ countries served
-                </p>
+                <p className="mt-1 text-sm text-slate-600">20+ countries served</p>
               </div>
 
               <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm">
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-50">
-                  <svg
-                    className="h-6 w-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  <svg
-                    className="h-6 w-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
+                  <svg className="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h4 className="font-semibold text-slate-900">
-                  Quality Certified
-                </h4>
-                <p className="mt-1 text-sm text-slate-600">
-                  ISO standards compliance
-                </p>
-                <h4 className="font-semibold text-slate-900">
-                  Quality Certified
-                </h4>
-                <p className="mt-1 text-sm text-slate-600">
-                  ISO standards compliance
-                </p>
+                <h4 className="font-semibold text-slate-900">Quality Certified</h4>
+                <p className="mt-1 text-sm text-slate-600">ISO standards compliance</p>
               </div>
             </div>
 

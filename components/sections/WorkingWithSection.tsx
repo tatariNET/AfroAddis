@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function PartnerLogo({ name, src }: { name: string; src?: string }) {
+function PartnerLogo({ name, src, scale }: { name: string; src?: string; scale?: number }) {
   const [failed, setFailed] = useState(false);
 
   const initials = name
@@ -12,35 +12,45 @@ function PartnerLogo({ name, src }: { name: string; src?: string }) {
     .join("")
     .toUpperCase();
 
+  // fixed box for each partner logo so all logos render at the same size
+  const boxClasses = "h-20 w-36 flex items-center justify-center";
+
   if (!src || failed) {
     return (
-      <div className="flex h-16 items-center justify-center">
+      <div className={`${boxClasses}`}>
         <span className="text-sm font-semibold text-gray-700">{initials}</span>
       </div>
     );
   }
 
   return (
-    <div className="flex items-center justify-center h-16">
-      <Image
-        src={src}
-        alt={name}
-        width={120}
-        height={60}
-        className="object-contain max-h-12 w-auto"
-        onError={() => setFailed(true)}
-      />
+    <div className={`${boxClasses}`}>
+      <div className="relative h-full w-full flex items-center justify-center">
+        <div
+          className="h-full w-full flex items-center justify-center"
+          style={scale && scale > 0 ? { transform: `scale(${scale})`, transformOrigin: 'center' } : undefined}
+        >
+          <Image
+            src={src}
+            alt={name}
+            fill
+            className="object-contain p-1"
+            sizes="120px"
+            onError={() => setFailed(true)}
+          />
+        </div>
+      </div>
     </div>
   );
 }
 
 const partners = [
-  { id: 1, name: "Samsung", logo: "/samsung.svg" },
-  { id: 2, name: "Hisense", logo: "/hisense.svg" },
-  { id: 3, name: "LG", logo: "/lg.svg" },
-
-  { id: 5, name: "Sony ", logo: "/sony.svg" },
-  { id: 6, name: "Suzuki", logo: "/suzuki.svg" },
+  { id: 1, name: "Samsung", logo: "/samsung.svg", scale: 1.8 },
+  { id: 2, name: "Hisense", logo: "/hisense.png", scale: 2.2 },
+  { id: 3, name: "LG", logo: "/lg.svg" , scale: 0.7 },
+{ id: 4, name: "Kumtel", logo: "/kumtel.svg", scale: 1.1 },
+  { id: 5, name: "Sony ", logo: "/sony.svg", scale: 0.9 },
+  { id: 6, name: "Suzuki", logo: "/suzuki.svg", scale: 0.7},
 ];
 
 export function WorkingWithSection() {
@@ -63,10 +73,10 @@ export function WorkingWithSection() {
       </div>
 
       <div className="mx-auto max-w-5xl">
-        <div className="grid items-center justify-items-center gap-6 [grid-template-columns:repeat(auto-fit,minmax(140px,1fr))]">
+        <div className="grid items-center justify-items-center sm:gap-6 md:gap-8 grid-cols-[repeat(auto-fit,minmax(140px,1fr))]">
           {partners.map((p) => (
             <div key={p.id} className="flex items-center justify-center">
-              <PartnerLogo name={p.name} src={p.logo} />
+              <PartnerLogo name={p.name} src={p.logo} scale={p.scale} />
             </div>
           ))}
         </div>

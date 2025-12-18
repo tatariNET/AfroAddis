@@ -10,11 +10,15 @@ const serviceCards = [
     description: `Offering essential household goods through a customer-focused, credit-based retail model that supports local manufacturing and international partnerships making high-quality products accessible worldwide.`,
     images: [
       "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1523473827532-0e0b4d9a4b6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80",
     ],
     overlay: "from-black/70 via-black/30 to-transparent",
-    tags: ["Household goods", "Credit retail", "Local manufacturing", "Global partners"],
+    tags: [
+      "Household goods",
+      "Credit retail",
+      "Local manufacturing",
+      "Global partners",
+    ],
     href: "/services#trading",
   },
   {
@@ -25,7 +29,6 @@ const serviceCards = [
     images: [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1517249378-59f5f0f4c8d6?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
     ],
     overlay: "from-slate-900/80 via-slate-800/60 to-slate-600/40",

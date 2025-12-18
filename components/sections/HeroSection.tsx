@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Plane } from "lucide-react";
 
 const trustBadges = [
   "AEO Accreditation · In Progress",
@@ -33,7 +34,7 @@ export function HeroSection() {
       className="relative overflow-hidden bg-[#0f172a] text-white shadow-2xl shadow-emerald-900/20"
     >
       <div className="absolute inset-0 opacity-70">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(236,187,82,0.25),_transparent_50%),_radial-gradient(circle_at_bottom,_rgba(16,185,129,0.2),_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(236,187,82,0.25),transparent_50%),radial-gradient(circle_at_bottom,rgba(16,185,129,0.2),transparent_50%)]" />
         <div className="hero-carousel absolute inset-0 mix-blend-soft-light">
           {[
             "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
@@ -55,7 +56,7 @@ export function HeroSection() {
 
       <div className="relative grid items-stretch gap-12 px-6 py-12 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)] sm:px-10 sm:py-16 lg:px-16">
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 rounded border border-white/20 px-4 py-1 font-semibold uppercase tracking-[0.35em] bg-red-700">
+          <div className="inline-flex items-center gap-2 rounded border border-white/20 px-1 py-2 font-semibold uppercase tracking-[0.35em] bg-red-700">
             Afro Addis · Ethiopia
           </div>
           <div className="space-y-4">
@@ -144,7 +145,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#020817] p-6">
+          <div className="relative overflow-hidden rounded border border-white/10 bg-[#040f2a] p-6">
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                 Global trade routes
@@ -154,7 +155,7 @@ export function HeroSection() {
               </p>
             </div>
             <div className="relative mt-6">
-              <div className="h-48 w-full rounded-2xl bg-linear-to-br from-slate-900 to-slate-800">
+              <div className="h-48 w-full rounded-2xl ">
                 <div className="absolute inset-0 opacity-50">
                   <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/BlankMap-World.svg/1024px-BlankMap-World.svg.png')] bg-contain bg-center bg-no-repeat invert" />
                 </div>
@@ -165,12 +166,14 @@ export function HeroSection() {
                       className="flex items-center justify-between border-b border-white/10 py-1 last:border-none"
                     >
                       <span>{destination}</span>
-                      <span className="text-white/60">In transit</span>
+                      <span>
+                        <Plane width={16} height={16} />
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="absolute -bottom-5 left-1/2 w-40 -translate-x-1/2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-xs font-semibold text-white/80 backdrop-blur">
+              <div className="absolute bottom-44 left-1/2 w-40 -translate-x-1/2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-xs font-semibold text-white/80 backdrop-blur">
                 Addis Ababa HQ · Bole
               </div>
             </div>
