@@ -122,6 +122,6 @@ export const megaMenuGroups: MegaMenuGroup[] = [
 ];
 
 export const primaryLinks = [
-  { label: "Magazines", href: "/magazines" },
+ // { label: "Magazines", href: "/magazines" },
   { label: "Contact", href: "/contact" },
 ];
