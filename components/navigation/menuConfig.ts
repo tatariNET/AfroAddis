@@ -80,23 +80,6 @@ export const megaMenuGroups: MegaMenuGroup[] = [
           },
         ],
       },
-      {
-        title: "Strategic Growth Services",
-        items: [
-          {
-            label: "Mining Industry Solutions",
-            href: "/services/growth#mining",
-          },
-          {
-            label: "Vehicle Assembly Operations",
-            href: "/services/growth#assembly",
-          },
-          {
-            label: "Joint Venture Partnerships",
-            href: "/services/growth#joint-venture",
-          },
-        ],
-      },
     ],
   },
   {

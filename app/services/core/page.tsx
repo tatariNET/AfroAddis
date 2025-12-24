@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const sections = [
   {
     id: "trading",
@@ -14,8 +18,29 @@ const sections = [
       { label: "Credit customers", value: "18k+" },
       { label: "Service hubs", value: "5" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
+    overlay: "from-black/70 via-black/30 to-transparent",
+    // previous image:
+    // "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
+    images: [
+      "/trading/fridge1.jpg",
+      "/trading/fridge2.jpg",
+      "/trading/fridge3 black.jpg",
+      "/trading/kitchen1.jpg",
+      "/trading/kitchen2.jpg",
+      "/trading/kitchen3.jpg",
+      "/trading/kitchen4.jpg",
+      "/trading/lowndary1.jpg",
+      "/trading/lunch table1.jpg",
+      "/trading/meal table 4 coffee.jpg",
+      "/trading/meal table2.jpg",
+      "/trading/meal table3.jpg",
+      "/trading/oven1.jpg",
+      "/trading/oven2.jpg",
+      "/trading/smart screen 3 samsung.jpg",
+      "/trading/smart screen with netflix.jpg",
+      "/trading/smart screen1.jpg",
+      "/trading/sofa1.jpg",
+    ],
     details: [
       "Sales & marketing execution powered by trained sales teams and digital marketing tools to deliver personalized, informed customer journeys.",
     ],
@@ -35,8 +60,15 @@ const sections = [
       { label: "Warehouses", value: "4" },
       { label: "Retailers served", value: "1,200+" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+    overlay: "from-slate-900/80 via-slate-800/60 to-slate-600/40",
+    // previous image:
+    // "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+    images: [
+      "/import/import1.jpg",
+      "/import/import2.jpg",
+      "/import/import3.jpg",
+      "/import/import4.jpg",
+    ],
     details: [
       "Customer-first access through flexible credit and cash payment options, enabling customers to enjoy global-quality products without financial strain.",
       "Strategic impact strengthening AfroAddis’s trading capabilities, competitiveness, and customer choice across both retail and institutional markets.",
@@ -57,8 +89,20 @@ const sections = [
       { label: "Processing sites", value: "6" },
       { label: "Global buyers", value: "40+" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80",
+    overlay: "from-black/80 via-black/40 to-amber-900/30",
+    // previous image:
+    // "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80",
+    images: [
+      "/export/cerial fresh1.jpg",
+      "/export/cerial fresh2.jpg",
+      "/export/cerial fresh3.jpg",
+      "/export/cerials1.jpg",
+      "/export/cerials2.jpg",
+      "/export/coffee1.jpg",
+      "/export/coffee2.jpg",
+      "/export/coffee3.jpg",
+      "/export/sunflower1.jpg",
+    ],
     details: [
       "Global market participation through international tenders and transparent pricing structures that enhance Ethiopia’s visibility and competitiveness worldwide.",
       "Reinvestment strategy channeling export earnings into domestic growth initiatives such as the Credit-House system, local job creation, and operational scaling and innovation.",
@@ -80,8 +124,20 @@ const sections = [
       { label: "Sqm capacity", value: "12k+" },
       { label: "Projects/year", value: "150+" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+    overlay: "from-amber-900/80 via-amber-700/50 to-amber-400/30",
+    // previous image:
+    // "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+    images: [
+      "/manufacturing/manu1.jpg",
+      "/manufacturing/manu2.jpg",
+      "/manufacturing/manu3.jpg",
+      "/manufacturing/manu4.jpg",
+      "/manufacturing/wood1.jpg",
+      "/manufacturing/wood2.jpg",
+      "/manufacturing/wood3.jpg",
+      "/manufacturing/wood4.jpg",
+      "/manufacturing/wood5.jpg",
+    ],
     details: [
       "Import substitution focus delivering locally manufactured furniture that competes with imported alternatives, contributing to national objectives of reducing dependence on foreign products.",
       "Warranty-backed reliability with a one-year warranty on all products, demonstrating confidence in the durability and performance of AfroAddis-manufactured furniture.",
@@ -89,11 +145,117 @@ const sections = [
   },
 ];
 
+type CoreSection = (typeof sections)[number];
+
 function StatPill({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-semibold text-gray-700 shadow-sm">
       <span className="text-gray-900">{value}</span> {label}
     </div>
+  );
+}
+
+function CoreServiceSection({ section }: { section: CoreSection }) {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setImageIndex((i) => i + 1);
+    }, 4000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <section
+      id={section.id}
+      className="overflow-hidden rounded-2xl border border-gray-100 bg-white/95 shadow-lg shadow-amber-900/5 min-h-[420px]"
+    >
+      <div className="grid gap-0 lg:grid-cols-2 items-stretch">
+        <div className="p-6 sm:p-8 space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-amber-700">
+                Core service
+              </p>
+              <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                {section.title}
+              </h2>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {section.bullets.map((b) => (
+                <StatPill
+                  key={`${section.id}-${b.label}`}
+                  label={b.label}
+                  value={b.value}
+                />
+              ))}
+            </div>
+          </div>
+
+          <p className="text-base text-gray-700">{section.lead}</p>
+
+          <ul className="space-y-2 text-sm text-gray-700">
+            {section.points.map((p, i) => (
+              <li key={`${section.id}-pt-${i}`} className="flex gap-2">
+                <span
+                  className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-700"
+                  aria-hidden="true"
+                />
+                <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 space-y-1 text-sm text-gray-700">
+            {section.details.map((d, i) => (
+              <p key={`${section.id}-detail-${i}`}>{d}</p>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative h-full min-h-[280px] bg-gray-50">
+          <div
+            className={`absolute inset-0 bg-linear-to-br ${
+              section.overlay ?? "from-black/30 via-transparent to-amber-900/10"
+            }`}
+            aria-hidden="true"
+          />
+          {section.images.map((src, i) => (
+            <div
+              key={`${section.id}-img-${i}`}
+              className={`absolute inset-0 transition-opacity duration-700 ${
+                i === imageIndex % section.images.length
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
+              }`}
+            >
+              <img
+                src={src}
+                alt={`${section.title} ${i + 1}`}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+          <button
+            type="button"
+            onClick={() => setImageIndex((i) => i - 1)}
+            aria-label="Previous image"
+            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/50 p-2 text-gray-900 shadow-md hover:bg-white/70"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={() => setImageIndex((i) => i + 1)}
+            aria-label="Next image"
+            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/50 p-2 text-gray-900 shadow-md hover:bg-white/70"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -128,68 +290,7 @@ export default function CoreServicesPage() {
 
       <div className="mx-auto max-w-6xl space-y-10">
         {sections.map((section) => (
-          <section
-            key={section.id}
-            id={section.id}
-            className="overflow-hidden rounded-2xl border border-gray-100 bg-white/95 shadow-lg shadow-amber-900/5"
-          >
-            <div className="grid gap-0 lg:grid-cols-2">
-              <div className="p-6 sm:p-8 space-y-4">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-amber-700">
-                      Core service
-                    </p>
-                    <h2 className="mt-2 text-2xl font-bold text-gray-900">
-                      {section.title}
-                    </h2>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {section.bullets.map((b) => (
-                      <StatPill
-                        key={`${section.id}-${b.label}`}
-                        label={b.label}
-                        value={b.value}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <p className="text-base text-gray-700">{section.lead}</p>
-
-                <ul className="space-y-2 text-sm text-gray-700">
-                  {section.points.map((p, i) => (
-                    <li key={`${section.id}-pt-${i}`} className="flex gap-2">
-                      <span
-                        className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-700"
-                        aria-hidden="true"
-                      />
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-4 space-y-1 text-sm text-gray-700">
-                  {section.details.map((d, i) => (
-                    <p key={`${section.id}-detail-${i}`}>{d}</p>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative h-full min-h-[260px] bg-gray-50">
-                <div
-                  className="absolute inset-0 bg-linear-to-br from-black/20 via-transparent to-amber-900/10"
-                  aria-hidden="true"
-                />
-                <img
-                  src={section.image}
-                  alt={`${section.title} illustrative`}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </section>
+          <CoreServiceSection key={section.id} section={section} />
         ))}
       </div>
     </div>

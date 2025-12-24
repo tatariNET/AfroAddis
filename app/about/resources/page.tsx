@@ -5,7 +5,6 @@ const sections = [
   {
     id: "timeline",
     title: "Corporate timeline",
-    lead: "Milestones and expansion phases from founding through export growth, manufacturing, and new initiatives.",
     lead: "Key milestones from founding through export growth, manufacturing, and new initiatives.",
     points: [
       "2015: Founded KYT Trading PLC (AFROADDIS) focused on import and trading.",
@@ -96,9 +95,7 @@ export default function AboutResourcesPage() {
           >
             <div className="grid gap-0 lg:grid-cols-2">
               <div className="p-6 sm:p-8 space-y-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-700">
-                  Resources column
-                </p>
+               
                 <h2 className="mt-2 text-2xl font-bold text-gray-900">
                   {section.title}
                 </h2>

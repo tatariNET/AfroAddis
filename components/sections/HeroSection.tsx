@@ -57,11 +57,11 @@ export function HeroSection() {
       <div className="relative grid items-stretch gap-12 px-6 py-12 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)] sm:px-10 sm:py-16 lg:px-16">
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 rounded border border-white/20 px-1 py-2 font-semibold uppercase tracking-[0.35em] bg-red-700">
-            Afro Addis · Ethiopia
+            AfroAddis · Ethiopia
           </div>
           <div className="space-y-4">
             <h1 className="text-balance text-4xl font-serif  text-gray-100 sm:text-4xl lg:text-4xl">
-              Transforming Trade, Manufacturing, and Export for a Better Future
+              PACESETTER IN SHAPING THE FUTURE
             </h1>
             <p className="max-w-2xl text-base text-gray-100 font-sans sm:text-lg">
               A multi-sector enterprise transforming Ethiopia’s economy through
