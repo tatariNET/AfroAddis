@@ -36,11 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f7f4ed] text-gray-900 `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f7f4ed] text-gray-900 overflow-x-hidden`}
       >
         <Navbar />
 
-        <main className=" pb-16 pt-28 sm:px-6 lg:px-10">
+        <main className="pb-16 pt-28 sm:px-6 lg:px-10 overflow-x-hidden">
           {children}
         </main>
 

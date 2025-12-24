@@ -66,25 +66,26 @@ function StatItem({ value, label }: { value: string | number; label: string }) {
 
 const featuredImages = [
   {
-    src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
-    caption: "Quality Assurance Centers",
+    // previous src:
+    // "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
+    src: "/trading/kitchen1.jpg",
+    caption: "Showrooms & Household Goods",
   },
   {
-    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    caption: "Modern Logistics Infrastructure",
+    // previous src:
+    // "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+    src: "/manufacturing/manu1.jpg",
+    caption: "Manufacturing & Woodwork",
   },
 ];
 
 const operationHighlights = [
   {
-    src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80",
+    // previous src:
+    // "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80",
+    src: "/import/import1.jpg",
     caption: "Advanced Warehousing",
     description: "State-of-the-art storage facilities with climate control",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
-    caption: "Supply Chain Excellence",
-    description: "End-to-end logistics management and tracking",
   },
 ];
 
@@ -308,9 +309,11 @@ export function AboutSection() {
 
             {/* Stats Bar */}
             <div className=" p-6 text-white">
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <StatItem value="8+" label="Years Experience" />
-                <StatItem value="50+" label="Global Partners" />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <StatItem value="10+" label="Years of operations" />
+                <StatItem value="4" label="Integrated divisions" />
+                <StatItem value="25+" label="International partners" />
+                <StatItem value="8" label="Global trade routes" />
               </div>
             </div>
           </div>

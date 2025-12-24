@@ -106,7 +106,7 @@ export function ContactSection() {
               <p className="text-xs uppercase tracking-widest text-white/70">
                 Addis Ababa
               </p>
-              <p className="text-xl font-semibold">HQ · Bole, Addis Ababa</p>
+              <p className="text-xl font-semibold">Addis Ababa, Ethiopia</p>
             </div>
           </div>
 

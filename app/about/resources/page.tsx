@@ -5,15 +5,15 @@ const sections = [
   {
     id: "timeline",
     title: "Corporate timeline",
-    lead: "Milestones and expansion phases from founding through export growth, manufacturing, and new initiatives.",
     lead: "Key milestones from founding through export growth, manufacturing, and new initiatives.",
     points: [
       "2015: Founded KYT Trading PLC (AFROADDIS) focused on import and trading.",
       "2018–2020: Expanded into coffee, sesame, pulses export; secured ECX seat.",
       "2021–2024: Launched manufacturing lines, strengthened retail credit, initiated mining/assembly pilots.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1600&q=80",
+    image: "/export/cerials1.jpg",
   },
   {
     id: "news",
@@ -24,8 +24,9 @@ const sections = [
       "Retail footprint: partner showrooms added in Addis Ababa and regional hubs.",
       "Sustainability: traceability and farmer support programs expanding in key origins.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80",
+    image: "/export/coffee1.jpg",
   },
   {
     id: "resources",
@@ -36,8 +37,10 @@ const sections = [
       "Division brochures: import/export catalogs, manufacturing capabilities, service menus.",
       "Compliance kit: licenses, registrations, and certificates.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80",
+    // previous images:
+    // "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80",
+    // "/certificate/certificate1.png",
+    image: "/export/cerial fresh3.jpg",
   },
 ];
 
@@ -48,8 +51,11 @@ export default function AboutResourcesPage() {
       <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
         <div className="grid lg:grid-cols-2">
           <div className="relative h-44 sm:h-64 lg:h-full">
+            {/* previous hero image:
+            https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1600&q=80
+            */}
             <Image
-              src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1600&q=80"
+              src="/export/cerial fresh1.jpg"
               alt="Resources and timeline"
               fill
               className="object-cover"
@@ -96,9 +102,7 @@ export default function AboutResourcesPage() {
           >
             <div className="grid gap-0 lg:grid-cols-2">
               <div className="p-6 sm:p-8 space-y-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-700">
-                  Resources column
-                </p>
+               
                 <h2 className="mt-2 text-2xl font-bold text-gray-900">
                   {section.title}
                 </h2>

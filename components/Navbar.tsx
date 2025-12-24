@@ -105,19 +105,16 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between py-1">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-16 w-20 sm:h-20 sm:w-24">
+            <div className="relative h-16 w-64  ">
               <Image
                 src="/afro_logo.png"
                 alt="Afro Addis logo"
                 fill
-                sizes="96px"
-                className="object-contain"
+                
+                className="object-cover h-full w-full"
                 priority
               />
             </div>
-            <span className="text-xl font-semibold tracking-tight text-red-600 sm:text-2xl">
-              KYT TRADING PLC.
-            </span>
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm font-medium text-gray-600 lg:flex">

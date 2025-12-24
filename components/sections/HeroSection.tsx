@@ -37,9 +37,13 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(236,187,82,0.25),transparent_50%),radial-gradient(circle_at_bottom,rgba(16,185,129,0.2),transparent_50%)]" />
         <div className="hero-carousel absolute inset-0 mix-blend-soft-light">
           {[
-            "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-            "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1600&q=80",
+            // previous images:
+            // "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+            // "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+            // "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1600&q=80",
+            "/trading/sofa1.jpg",
+            "/export/coffee1.jpg",
+            "/manufacturing/manu3.jpg",
           ].map((src, index) => (
             <div
               key={src}
@@ -57,11 +61,11 @@ export function HeroSection() {
       <div className="relative grid items-stretch gap-12 px-6 py-12 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.9fr)] sm:px-10 sm:py-16 lg:px-16">
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 rounded border border-white/20 px-1 py-2 font-semibold uppercase tracking-[0.35em] bg-red-700">
-            Afro Addis · Ethiopia
+            AfroAddis · Ethiopia
           </div>
           <div className="space-y-4">
             <h1 className="text-balance text-4xl font-serif  text-gray-100 sm:text-4xl lg:text-4xl">
-              Transforming Trade, Manufacturing, and Export for a Better Future
+              PACESETTER IN SHAPING THE FUTURE
             </h1>
             <p className="max-w-2xl text-base text-gray-100 font-sans sm:text-lg">
               A multi-sector enterprise transforming Ethiopia’s economy through
@@ -114,10 +118,15 @@ export function HeroSection() {
           <div className="relative overflow-hidden border border-white/10 bg-white/5 p-5 backdrop-blur">
             <div className="grid gap-3 sm:grid-cols-2">
               {[
-                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+                // previous collage images:
+                // "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+                // "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+                // "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
+                // "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+                "/trading/fridge1.jpg",
+                "/import/import2.jpg",
+                "/export/cerial fresh2.jpg",
+                "/manufacturing/wood4.jpg",
               ].map((src, index) => (
                 <div
                   key={index}
@@ -139,7 +148,7 @@ export function HeroSection() {
                 Integrated capability
               </p>
               <p className="mt-2 text-sm text-white/90">
-                Trading · Import & retail · Manufacturing · Global logistics
+                Trading, Manufacturing, Import, Export, Real state, Business & Research
               </p>
             </div>
           </div>
@@ -150,7 +159,7 @@ export function HeroSection() {
                 Global trade routes
               </p>
               <p className="text-base text-white/90">
-                Addis Ababa → Key international partners
+                Ethiopia → Key international partners
               </p>
             </div>
             <div className="relative mt-6">
@@ -173,7 +182,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="absolute bottom-44 left-1/2 w-40 -translate-x-1/2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-xs font-semibold text-white/80 backdrop-blur">
-                Addis Ababa HQ · Bole
+                Addis Ababa, Ethiopia
               </div>
             </div>
           </div>
