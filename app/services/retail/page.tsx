@@ -13,8 +13,9 @@ const sections = [
       { label: "Credit customers", value: "18k+" },
       { label: "Cities served", value: "35+" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1505238680356-667803448bb6?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1505238680356-667803448bb6?auto=format&fit=crop&w=1600&q=80",
+    image: "/trading/kitchen3.jpg",
     details: [
       "Category plans tuned to local demand signals; seasonal rotations to keep baskets growing.",
       "Field teams manage merchandising, replenishment, and training with weekly execution checks.",
@@ -35,8 +36,9 @@ const sections = [
       { label: "Joint launches", value: "45+" },
       { label: "Cities", value: "35+" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1600&q=80",
+    image: "/trading/smart screen1.jpg",
     details: [
       "Partner onboarding kits with merchandising standards and service-level expectations.",
       "Joint business planning for promos, bundles, and category resets tied to local seasonality.",
@@ -57,8 +59,9 @@ const sections = [
       { label: "Tech network", value: "90+" },
       { label: "Warranty SKUs", value: "400+" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+    image: "/import/import3.jpg",
     details: [
       "Parts inventory governance with min/max by city and automated replenishment signals.",
       "Technician enablement: diagnostics, training, and routed schedules to cut downtime.",
@@ -111,7 +114,7 @@ export default function RetailServicesPage() {
             id={section.id}
             className="overflow-hidden rounded-2xl border border-gray-100 bg-white/95 shadow-lg shadow-blue-900/5"
           >
-            <div className="grid gap-0 lg:grid-cols-2">
+            <div className="grid gap-0 lg:grid-cols-2 items-stretch">
               <div className="p-6 sm:p-8 space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
@@ -152,7 +155,7 @@ export default function RetailServicesPage() {
                 </div>
               </div>
 
-              <div className="relative h-full min-h-[260px] bg-gray-50">
+              <div className="relative bg-gray-50">
                 <div
                   className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-blue-900/10"
                   aria-hidden="true"
@@ -160,7 +163,7 @@ export default function RetailServicesPage() {
                 <img
                   src={section.image}
                   alt={`${section.title} illustrative`}
-                  className="h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
                 />
               </div>
