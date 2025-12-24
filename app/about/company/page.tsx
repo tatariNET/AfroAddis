@@ -14,8 +14,9 @@ const sections = [
       "Serve domestic retail/wholesale partners and global buyers in Africa, EU, Middle East, North America.",
       "Value pillars: trust, integrity, professionalism, and on-time quality delivery.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
+    image: "/trading/sofa1.jpg",
   },
   {
     id: "governance",
@@ -27,8 +28,9 @@ const sections = [
       "Periodic audits, governance cadence, and reporting for transparency and performance.",
       "Compliance aligned to Ethiopian regulations and international trade standards.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
+    // previous image:
+    // "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
+    image: "/manufacturing/wood2.jpg",
   },
   {
     id: "achievements",
@@ -54,8 +56,10 @@ const sections = [
       "Division brochures: import/export catalogs, manufacturing capabilities, service menus.",
       "Compliance kit: licenses, registrations, certificates.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80",
+    // previous images:
+    // "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80",
+    // "/certificate/certificate2.png",
+    image: "/export/cerials2.jpg",
   },
 ];
 
@@ -87,8 +91,11 @@ export default function AboutCompanyPage() {
       <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
         <div className="grid lg:grid-cols-2">
           <div className="relative h-44 sm:h-64 lg:h-full">
+            {/* previous hero image:
+            https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80
+            */}
             <Image
-              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80"
+              src="/trading/kitchen1.jpg"
               alt="Company operations"
               fill
               className="object-cover"

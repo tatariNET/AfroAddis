@@ -8,16 +8,18 @@ export default function AboutPage() {
       description:
         "Company profile, governance & board, achievements & awards, and key resources.",
       href: "/about/company#company",
-      image:
-        "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
+      // previous image:
+      // "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
+      image: "/trading/sofa1.jpg",
     },
     {
       title: "Resources",
       description:
         "Corporate timeline, news & updates, and downloadable resources for partners.",
       href: "/about/resources#timeline",
-      image:
-        "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1600&q=80",
+      // previous image:
+      // "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1600&q=80",
+      image: "/export/cerial fresh1.jpg",
     },
   ];
 

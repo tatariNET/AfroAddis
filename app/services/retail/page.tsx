@@ -115,9 +115,7 @@ export default function RetailServicesPage() {
               <div className="p-6 sm:p-8 space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-amber-700">
-                      Retail column
-                    </p>
+                   
                     <h2 className="mt-2 text-2xl font-bold text-gray-900">
                       {section.title}
                     </h2>
