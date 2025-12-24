@@ -55,10 +55,10 @@ export const megaMenuGroups: MegaMenuGroup[] = [
         title: "Core Business Services",
         items: [
           { label: "Trading", href: "/services/core#trading" },
-          { label: "Import & Sourcing", href: "/services/core#import" },
-          { label: "Export & Distribution", href: "/services/core#export" },
+          { label: "Import", href: "/services/core#import" },
+          { label: "Export", href: "/services/core#export" },
           {
-            label: "Manufacturing & Production",
+            label: "Manufacturing",
             href: "/services/core#manufacturing",
           },
         ],
@@ -101,20 +101,19 @@ export const megaMenuGroups: MegaMenuGroup[] = [
   },
   {
     label: "Products",
-    href: "/products",
+    href: "//products",
     columns: [
       {
         title: "Household Goods",
         items: [
           {
-            label: "Home Appliances",
+            label: "Electronics",
             href: "/products/household#home-appliances",
           },
           {
-            label: "Furniture & Decor",
+            label: "Furniture",
             href: "/products/household#furniture-decor",
           },
-          { label: "Kitchenware", href: "/products/household#kitchenware" },
         ],
       },
       {
@@ -127,27 +126,6 @@ export const megaMenuGroups: MegaMenuGroup[] = [
           {
             label: "Computers & Accessories",
             href: "/products/electronics#computers-accessories",
-          },
-          {
-            label: "Audio & Video Equipment",
-            href: "/products/electronics#audio-video",
-          },
-        ],
-      },
-      {
-        title: "Automotive & Industrial",
-        items: [
-          {
-            label: "Vehicle Parts & Accessories",
-            href: "/products/automotive#vehicle-parts",
-          },
-          {
-            label: "Machinery & Tools",
-            href: "/products/automotive#machinery-tools",
-          },
-          {
-            label: "Building Materials",
-            href: "/products/automotive#building-materials",
           },
         ],
       },

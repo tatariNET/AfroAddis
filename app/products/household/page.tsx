@@ -1,29 +1,30 @@
 const sections = [
   {
     id: "home-appliances",
-    title: "Home Appliances",
-    lead: "Core household appliances with localized specs, warranties, and delivery + installation support for retail and project buyers.",
+    title: "Electronics",
+    lead:
+      "Smartphones, computers, and connected devices configured for Ethiopian consumers and institutions, with localized specs and reliable after-sales.",
     points: [
-      "Cooling, laundry, cooking, and small appliances tuned to voltage, water, and space realities.",
-      "Warranty-backed with spare-parts coverage and technician training for quick turnaround.",
-      "Retail, B2B, and project bundles with financing and merchandising support.",
+      "Curated lineups of smartphones, laptops, and accessories aligned to local power, language, and usage needs.",
+      "Warranty-backed coverage with service hubs and spare-parts planning for fast movers.",
+      "Retail and B2B programs combining devices, accessories, and financing options.",
     ],
     bullets: [
-      { label: "SKUs", value: "280+" },
+      { label: "Devices & SKUs", value: "350+" },
       { label: "Service hubs", value: "5" },
-      { label: "Brands", value: "18" },
+      { label: "Retail partners", value: "1,000+" },
     ],
     image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80",
     details: [
-      "Tiered price points across brands; demo and floor models for anchor partners.",
-      "After-sales kits per SKU family plus installer onboarding guides.",
-      "Delivery and basic install options to reduce friction and returns.",
+      "Attach programs for accessories and services to lift basket sizes and customer satisfaction.",
+      "Training for sales teams on demos, setup, and routing to service centers.",
+      "Deployment support for institutions and projects needing standardized device fleets.",
     ],
   },
   {
     id: "furniture-decor",
-    title: "Furniture & Decor",
+    title: "Furniture",
     lead: "Residential and hospitality furniture plus decor accents, combining local craftsmanship with durable finishes.",
     points: [
       "Sofa, bedroom, dining, storage, and accent pieces with fabric and finish selections.",
@@ -41,28 +42,6 @@ const sections = [
       "Design support for layouts, BOQs, and finish schedules aligned to budgets and timelines.",
       "QC from frame build to upholstery and final inspection before dispatch.",
       "White-glove delivery and installation with punch-list closeout.",
-    ],
-  },
-  {
-    id: "kitchenware",
-    title: "Kitchenware",
-    lead: "Cookware, tableware, and storage curated for durability, safety, and modern aesthetics.",
-    points: [
-      "Non-stick, stainless, and cast options covering daily cooking and entertaining needs.",
-      "Tabletop lines for home and hospitality with coordinated sets and replenishment programs.",
-      "Displays, planograms, and training for retailers to maintain presentation and attach rates.",
-    ],
-    bullets: [
-      { label: "SKUs", value: "320+" },
-      { label: "Retail partners", value: "800+" },
-      { label: "Collections", value: "22" },
-    ],
-    image:
-      "https://images.unsplash.com/photo-1484156818044-c040038b0710?auto=format&fit=crop&w=1600&q=80",
-    details: [
-      "Durability and food-safety standards validated with supplier QA and periodic batch testing.",
-      "Bundle programs (cookware + storage + knives) to lift basket sizes in retail.",
-      "Hospitality packs with reorder cadences and breakage buffers built in.",
     ],
   },
 ];
@@ -83,12 +62,11 @@ export default function HouseholdProductsPage() {
           Household Goods
         </p>
         <h1 className="text-4xl font-semibold text-gray-900 sm:text-5xl">
-          Appliances, Furniture, Kitchen
+          Electronics and Furniture
         </h1>
         <p className="text-lg text-gray-700">
-          Detailed view of our household lines: appliances with service support,
-          furniture programs, and kitchen/tabletop ranges. Anchors match the
-          Products column for quick jumps.
+          Detailed view of our household offering focused on electronics and
+          furniture, aligned to the Products menu for quick navigation.
         </p>
       </header>
 

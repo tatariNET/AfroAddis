@@ -7,7 +7,7 @@ const categories = [
   {
     key: "household",
     title: "Household Goods",
-    copy: "Home Appliances, Furniture & Decor, and Kitchenware with localized specs, warranties, and project support.",
+    copy: "Electronics and furniture for modern homes, with localized specs, warranties, and project support.",
     images: [
       "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
@@ -19,7 +19,7 @@ const categories = [
   {
     key: "electronics",
     title: "Electronics & Tech",
-    copy: "Smartphones & Tablets, Computers & Accessories, and Audio & Video Equipment with service coverage.",
+    copy: "Smartphones and Computers & Accessories with reliable service coverage.",
     images: [
       "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80",
@@ -27,16 +27,6 @@ const categories = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     ],
     href: "/products/electronics#smartphones-tablets",
-  },
-  {
-    key: "automotive",
-    title: "Automotive & Industrial",
-    copy: "Vehicle Parts & Accessories, Machinery & Tools, and Building Materials with QA and logistics built-in.",
-    images: [
-      "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-    ],
-    href: "/products/automotive#vehicle-parts",
   },
 ];
 

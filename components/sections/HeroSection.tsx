@@ -139,7 +139,7 @@ export function HeroSection() {
                 Integrated capability
               </p>
               <p className="mt-2 text-sm text-white/90">
-                Trading · Import & retail · Manufacturing · Global logistics
+                Trading, Manufacturing, Import, Export, Real state, Business & Research
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@ export function HeroSection() {
                 Global trade routes
               </p>
               <p className="text-base text-white/90">
-                Addis Ababa → Key international partners
+                Ethiopia → Key international partners
               </p>
             </div>
             <div className="relative mt-6">
@@ -173,7 +173,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="absolute bottom-44 left-1/2 w-40 -translate-x-1/2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-xs font-semibold text-white/80 backdrop-blur">
-                Addis Ababa HQ · Bole
+                Addis Ababa, Ethiopia
               </div>
             </div>
           </div>

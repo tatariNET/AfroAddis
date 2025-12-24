@@ -43,28 +43,6 @@ const sections = [
       "Channel enablement: datasheets, demo units, and financing pathways for partners.",
     ],
   },
-  {
-    id: "audio-video",
-    title: "Audio & Video Equipment",
-    lead: "Home and professional AV including displays, projectors, PA, and conferencing kits with installation support.",
-    points: [
-      "Segmented assortments for home entertainment, retail fit-outs, and corporate AV needs.",
-      "Site survey and install partners with commissioning checklists and training.",
-      "Spare-part buffers for lamps, drivers, and critical components to reduce downtime.",
-    ],
-    bullets: [
-      { label: "Display sizes", value: "24" },
-      { label: "Install partners", value: "40+" },
-      { label: "Projects/year", value: "180+" },
-    ],
-    image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80",
-    details: [
-      "Bundled kits for classrooms, boardrooms, and retail signage with tested interoperability.",
-      "Commissioning SOPs and user handover packs to ensure smooth go-live.",
-      "Maintenance windows and SLAs tuned to venue type and usage intensity.",
-    ],
-  },
 ];
 
 function StatPill({ label, value }: { label: string; value: string }) {
@@ -83,11 +61,12 @@ export default function ElectronicsProductsPage() {
           Electronics & Tech
         </p>
         <h1 className="text-4xl font-semibold text-gray-900 sm:text-5xl">
-          Mobility, Computing, AV
+          Smartphones and Computers
         </h1>
         <p className="text-lg text-gray-700">
-          Expanded view of our electronics portfolio with anchor links aligned
-          to the Products column: mobility, computing, and audio/video systems.
+          Expanded view of our core electronics portfolio with anchor links
+          aligned to the Products column: smartphones and computers with
+          accessories.
         </p>
       </header>
 

@@ -2,11 +2,12 @@ const sections = [
   {
     id: "trading",
     title: "Trading",
-    lead: "Our trading arm connects Ethiopia’s suppliers and global buyers through disciplined sourcing, financing, and distribution.",
+    lead:
+      "The Trading Division is the backbone of AfroAddis, delivering essential household goods through a customer-centric, credit-enabled retail and wholesale model that supports local manufacturing and global partnerships.",
     points: [
-      "Retail & wholesale programs for household goods with credit options and merchandising support.",
-      "Partner finance and trade terms to move inventory quickly while preserving margins.",
-      "Compliance-first documentation and logistics coordination for domestic and export lanes.",
+      "Credit-based retail programs enabling government and private-sector employees (ages 24–40) to access appliances and furniture through flexible 10-month payment plans.",
+      "Product portfolio spanning locally manufactured furniture—sofa sets, beds, wardrobes, and shelving—alongside imported household appliances including KRYSTER and BURKELYS refrigerators, stoves, and washing machines.",
+      "Showroom-led distribution through high-visibility locations in Megenagna and the AfroAddis Building, serving walk-in customers and institutional buyers.",
     ],
     bullets: [
       { label: "Retail network", value: "1,200+" },
@@ -16,19 +17,18 @@ const sections = [
     image:
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
     details: [
-      "Category planning for fast movers, premium lines, and seasonal rotations with demand signals from retail partners.",
-      "Store activation: planograms, POP materials, and field execution to keep shelves productive.",
-      "Credit enablement with partner banks; collections and risk controls aligned to turnover targets.",
+      "Sales & marketing execution powered by trained sales teams and digital marketing tools to deliver personalized, informed customer journeys.",
     ],
   },
   {
     id: "import",
-    title: "Import & Sourcing",
-    lead: "We source global-quality appliances, electronics, and materials with reliable after-sales and localized assortments.",
+    title: "Import",
+    lead:
+      "AfroAddis’s Import Division expands the company’s product portfolio by bringing globally sourced, high-quality goods to the Ethiopian market through a disciplined, compliance-driven import model.",
     points: [
-      "Category planning for electronics, appliances, and household goods tailored to Ethiopian demand.",
-      "Vendor selection, QC at origin, and freight consolidation to control landed cost and availability.",
-      "Warranty and parts programs to protect buyers and keep channels stocked.",
+      "Global sourcing strategy focused on trusted international suppliers to meet rising domestic demand while maintaining quality, reliability, and cost efficiency.",
+      "Product categories including household appliances from international brands such as ARKEMIX (France), along with hardware and finishing materials that support outsourced woodwork and interior solutions.",
+      "End-to-end operational oversight managed by the Business, Marketing, and Development Manager to ensure adherence to safety standards, import regulations, and local distribution requirements.",
     ],
     bullets: [
       { label: "Brands", value: "25+" },
@@ -38,19 +38,19 @@ const sections = [
     image:
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
     details: [
-      "Sourcing offices coordinate with OEMs for compliant labeling, voltage specs, and regional SKUs.",
-      "Origin QC and pre-shipment inspection to cut defects and returns; KPI reporting to suppliers.",
-      "Freight optimization: consolidation, routing, and buffer stock for predictable availability.",
+      "Customer-first access through flexible credit and cash payment options, enabling customers to enjoy global-quality products without financial strain.",
+      "Strategic impact strengthening AfroAddis’s trading capabilities, competitiveness, and customer choice across both retail and institutional markets.",
     ],
   },
   {
     id: "export",
-    title: "Export & Distribution",
-    lead: "Export programs for coffee, pulses, oilseeds, and specialty crops backed by traceability and QC.",
+    title: "Export ",
+    lead:
+      "AfroAddis’s Export Division advances Ethiopia’s agricultural excellence in global markets while reinforcing the company’s commitment to fair trade, rural empowerment, and sustainable economic growth.",
     points: [
-      "Origin sourcing across Sidama, Yirgacheffe, Guji, Jimma, and more with wet and dry mills.",
-      "Grading, cupping, moisture and defect checks, and compliant export documentation.",
-      "Multi-modal logistics and insurance to deliver reliably to Africa, EU, Middle East, and North America.",
+      "ECX-backed market access through registered membership with the Ethiopian Commodity Exchange (ECX), enabling transparent, regulated, and competitive export trading.",
+      "Commodity focus on high-value agricultural products including coffee, soya beans, sesame, pulses, and green mung beans.",
+      "Ethical sourcing model built on direct engagement with local farmers and cooperatives to ensure fair pricing, consistent quality, and support for rural livelihoods.",
     ],
     bullets: [
       { label: "Origins", value: "8" },
@@ -60,19 +60,20 @@ const sections = [
     image:
       "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80",
     details: [
-      "Cup profiling and sample roasting for buyers; green analysis with moisture, density, and defect counts.",
-      "Lot-level traceability and farmer support programs in coffee and pulses supply chains.",
-      "Export paperwork, insurance, and shipment tracking until POD to reduce buyer friction.",
+      "Global market participation through international tenders and transparent pricing structures that enhance Ethiopia’s visibility and competitiveness worldwide.",
+      "Reinvestment strategy channeling export earnings into domestic growth initiatives such as the Credit-House system, local job creation, and operational scaling and innovation.",
+      "Strategic impact strengthening Ethiopia’s trade balance, upgrading agricultural value chains, and showcasing the nation’s rich farming heritage to international buyers.",
     ],
   },
   {
     id: "manufacturing",
-    title: "Manufacturing & Production",
-    lead: "Furniture and woodwork manufacturing for residential, hospitality, and corporate projects.",
+    title: "Manufacturing",
+    lead:
+      "AfroAddis operates an efficient, community-driven manufacturing model for woodwork production, working with skilled Ethiopian artisans and regional manufacturing workshops to deliver high-quality household furniture while supporting local craftsmanship and economic development.",
     points: [
-      "Custom and catalog lines for living, kitchen, bedroom, and commercial fit-outs.",
-      "Material sourcing that combines local timber with imported finishes for durability and aesthetics.",
-      "Design support plus project management from fabrication to on-site installation.",
+      "Manufacturing network established through long-term collaboration with furniture manufacturing facilities across Ethiopia, producing sofa sets, beds, cupboards, kitchen cabinets, dining tables, dressing tables, and other household wood products.",
+      "Design-led manufacturing approach guided by AfroAddis’s proprietary designs and technical specifications, reflecting the company’s experience transitioning from small-scale in-house manufacturing that achieved star-level hotel furnishing standards.",
+      "Quality and safety management ensured through coordinated efforts of a dedicated Product Designer and a Quality & Safety Manager, maintaining strict compliance with material, durability, and safety requirements.",
     ],
     bullets: [
       { label: "Factories", value: "2" },
@@ -82,9 +83,8 @@ const sections = [
     image:
       "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
     details: [
-      "In-house design lab collaborating with architects and developers for bespoke finishes and joinery.",
-      "CNC, panel saws, and finishing lines enabling repeatable quality at scale.",
-      "On-site installation teams with punch-list closeout and post-handover support.",
+      "Import substitution focus delivering locally manufactured furniture that competes with imported alternatives, contributing to national objectives of reducing dependence on foreign products.",
+      "Warranty-backed reliability with a one-year warranty on all products, demonstrating confidence in the durability and performance of AfroAddis-manufactured furniture.",
     ],
   },
 ];

@@ -446,9 +446,19 @@ export function ServicesSection({
     );
   }
 
-  const filtered = keys
-    ? serviceCards.filter((c) => keys.includes(c.key))
-    : serviceCards;
+  const filtered = (() => {
+    if (keys && keys.length > 0) {
+      return serviceCards.filter((c) => keys.includes(c.key));
+    }
+
+    // Default homepage services: focus on core operational divisions
+    if (id === "services") {
+      const coreKeys = ["trading", "import", "export", "manufacturing"];
+      return serviceCards.filter((c) => coreKeys.includes(c.key));
+    }
+
+    return serviceCards;
+  })();
 
   return (
     <section
@@ -465,7 +475,7 @@ export function ServicesSection({
           </h2>
           <p className="mt-3 max-w-3xl mx-auto text-lg text-gray-700 font-sans">
             {description ??
-              "Export, import, trading and manufacturing connected through strict quality control, partner networks and local expertise."}
+             "Trading, Manufacturing, Import, Export, Real state, Business & Research"}
           </p>
         </div>
 
