@@ -246,12 +246,12 @@ export function Navbar() {
               </Link>
             ))}
 
-            <Link
+           {/*  <Link
               href="/contact"
               className="rounded bg-red-600 px-5 py-2.5 text-white transition hover:bg-gray-800 hover:shadow-lg"
             >
               Business inquiry
-            </Link>
+            </Link> */}
           </nav>
 
           <button
@@ -368,13 +368,13 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <Link
+               {/*  <Link
                   href="/contact"
                   className="block rounded-full bg-gray-900 px-4 py-3 text-center text-white"
                   onClick={() => setMobileNavOpen(false)}
                 >
                   Business inquiry
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
