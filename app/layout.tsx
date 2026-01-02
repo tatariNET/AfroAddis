@@ -7,11 +7,19 @@ import {
   MapPin,
   FileText,
   Linkedin,
-  Twitter,
   Facebook,
+  Instagram,
+  Send,
 } from "lucide-react";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+
+// Minimal TikTok glyph since lucide-react has no branded icon
+const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true" {...props}>
+    <path d="M31.5 10.7c1.4 1.3 3.1 2.3 5 2.6v5c-2.2-.1-4.3-.7-6.2-1.7v11.2c0 6.5-5.5 9.3-9.7 9.3-4.2 0-8.6-2.3-8.6-7.8 0-5.3 4-7.7 7.6-7.7.6 0 1.3.1 2 .2v5c-.4-.1-.9-.1-1.3-.1-1.6 0-3.3.8-3.3 2.9 0 2.1 1.9 3 3.6 3 2.1 0 4.1-1.2 4.1-3.7V7h6.8v3.7Z" />
+  </svg>
+);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,21 +63,49 @@ export default function RootLayout({
                 </p>
                 <div className="flex items-center gap-3 text-red-100">
                   <a
-                    href="#"
-                    aria-label="LinkedIn"
+                    href="https://t.me/AFROADDIS_KYT"
+                    aria-label="Telegram"
                     className="hover:text-white"
+                    target="_blank"
+                    rel="noreferrer noopener"
                   >
-                    <Linkedin size={18} />
-                  </a>
-                  <a href="#" aria-label="Twitter" className="hover:text-white">
-                    <Twitter size={18} />
+                    <Send size={22} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/AFROADDISKYT"
                     aria-label="Facebook"
                     className="hover:text-white"
+                    target="_blank"
+                    rel="noreferrer noopener"
                   >
-                    <Facebook size={18} />
+                    <Facebook size={22} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/afroaddis_kyt"
+                    aria-label="Instagram"
+                    className="hover:text-white"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <Instagram size={22} />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@afroaddiskyt"
+                    aria-label="TikTok"
+                    className="hover:text-white"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <TikTokIcon className="h-[30px] w-[30px]" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/afroaddis-kyt-trading-plc"
+                    aria-label="LinkedIn"
+                    className="hover:text-white"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <Linkedin size={22} />
                   </a>
                 </div>
               </div>
@@ -106,12 +142,16 @@ export default function RootLayout({
                 <p className="text-xs font-semibold uppercase tracking-wide text-red-200">
                   Contact
                 </p>
-                <ul className="mt-3 space-y-3 text-sm text-red-100">
+                <ul className="mt-3 space-y-3 text-sm text-red-100 ">
                   <li className="flex items-center gap-2">
                     <Mail size={16} /> <span>info@afroaddis.com</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Phone size={16} /> <span>+251 (0) 11 000 0000</span>
+                    <Phone size={16} /> <span>TEL: +251 11 551 5004</span>
+                  </li>
+
+                  <li className="flex items-center gap-2">
+                    <Phone size={16} /> <span>TEL: +251 11 465 5222</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <MapPin size={16} /> <span>Addis Ababa, Ethiopia</span>
@@ -119,13 +159,15 @@ export default function RootLayout({
                 </ul>
 
                 <div className="mt-4">
-                  <Link
-                    href="/corporate-profile.pdf"
+                  <a
+                    href="/magazines/afroaddis.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="inline-flex items-center gap-2 rounded bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/20"
                   >
                     <FileText size={16} />
                     Download corporate profile
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -137,6 +179,17 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+
+        <a
+          href="https://www.facebook.com/AFROADDISKYT"
+          aria-label="Message us on Facebook"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-4 py-3 text-sm font-semibold text-white shadow-xl hover:bg-[#0f6ae7] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1877F2]"
+        >
+          <Facebook className="h-5 w-5 text-white" />
+          <span>Message us on Facebook</span>
+        </a>
       </body>
     </html>
   );

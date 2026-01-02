@@ -126,10 +126,12 @@ export function ContactSection() {
                 <dt className="text-xs uppercase tracking-widest text-gray-500 font-medium">
                   Phone
                 </dt>
-                <dd className="text-base text-gray-900">
-                  +251 (0) 11 000 0000
+                <dd className="text-base text-gray-900 space-y-1">
+                  <p>TEL: +251 11 551 5004</p>
+                  <p>TEL: +251 11 465 5222</p>
                 </dd>
               </div>
+
               <div>
                 <dt className="text-xs uppercase tracking-widest text-gray-500 font-medium">
                   Location

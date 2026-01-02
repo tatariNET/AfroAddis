@@ -173,9 +173,9 @@ export function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative space-y-10 overflow-hidden  border border-white/70 bg-gradient-to-br from-[#fdf7ef] via-white to-[#f4eee4] px-6 py-14 text-gray-900 shadow-2xl shadow-amber-900/10 sm:px-10 lg:px-16"
+      className="relative space-y-10 overflow-hidden  border border-white/70 bg-linear-to-br from-[#fdf7ef] via-white to-[#f4eee4] px-6 py-14 text-gray-900 shadow-2xl shadow-amber-900/10 sm:px-10 lg:px-16"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(250,204,21,0.2),_transparent_45%)] opacity-60" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(250,204,21,0.2),transparent_45%)] opacity-60" />
       <div className="pointer-events-none absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/nistri.png')] opacity-15" />
 
       <div className="relative space-y-4 text-center lg:text-left">

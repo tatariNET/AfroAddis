@@ -47,7 +47,7 @@ export function HeroSection() {
           ].map((src, index) => (
             <div
               key={src}
-              className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-[2500ms]"
+              className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-2500"
               style={{
                 backgroundImage: `url(${src})`,
                 animation: `heroFade 18s infinite`,
@@ -89,17 +89,17 @@ export function HeroSection() {
 
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/divisions"
+              href="/services"
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:scale-[1.01]"
             >
               Explore our services
             </Link>
-            <Link
+            {/* <Link
               href="/resources#downloads"
               className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Download company profile
-            </Link>
+            </Link> */}
           </div>
 
           <dl className="grid gap-5 text-sm text-white/80 sm:grid-cols-4">
