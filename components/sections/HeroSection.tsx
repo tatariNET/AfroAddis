@@ -94,12 +94,12 @@ export function HeroSection() {
             >
               Explore our services
             </Link>
-            {/* <Link
-              href="/resources#downloads"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            <Link
+              href="/products/household#home-appliances"
+              className="text-black bg-white rounded-full inline-flex items-center px-6 py-3 text-sm font-semibold hover:scale-[1.01] transition justify-center"
             >
-              Download company profile
-            </Link> */}
+              View our products
+            </Link>
           </div>
 
           <dl className="grid gap-5 text-sm text-white/80 sm:grid-cols-4">
@@ -148,7 +148,8 @@ export function HeroSection() {
                 Integrated capability
               </p>
               <p className="mt-2 text-sm text-white/90">
-                Trading, Manufacturing, Import, Export, Real state, Business & Research
+                Trading, Manufacturing, Import, Export, Real state, Business &
+                Research
               </p>
             </div>
           </div>

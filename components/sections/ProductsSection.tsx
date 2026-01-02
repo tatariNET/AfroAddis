@@ -200,7 +200,7 @@ export function ProductsSection() {
         ))}
       </div>
 
-      <div className="relative text-sm font-semibold text-gray-900/80">
+      {/* <div className="relative text-sm font-semibold text-gray-900/80">
         <Link
           href="/products"
           className="absolute  bg-red-700 hover:bg-amber-700 text-white right-0  p-2 -bottom-4 rounded group inline-flex items-center gap-2 transition"
@@ -210,7 +210,7 @@ export function ProductsSection() {
             →
           </span>
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }
