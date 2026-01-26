@@ -110,8 +110,8 @@ export function Navbar() {
                 src="/afro_logo.png"
                 alt="Afro Addis logo"
                 fill
-                
-                className="object-cover h-full w-full"
+                sizes="256px"
+                className="object-contain"
                 priority
               />
             </div>

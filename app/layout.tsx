@@ -34,6 +34,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Afro Addis",
   description: "Afro Addis official website",
+  icons: {
+    icon: "/afro_logo.png",
+    apple: "/afro_logo.png",
+  },
 };
 
 export default function RootLayout({
