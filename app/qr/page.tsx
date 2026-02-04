@@ -8,7 +8,7 @@ const Page = () => {
         <div className="relative px-6 py-12 sm:px-10 sm:py-16 lg:px-16">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded border border-white/20 bg-red-700 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em]">
-              AfroAddis · QR
+              AfroAddis · Ethiopia
             </div>
             <div className="space-y-3">
               <h1 className="text-balance text-3xl font-serif text-gray-100 sm:text-4xl lg:text-4xl">
@@ -17,7 +17,7 @@ const Page = () => {
               <p className="max-w-2xl text-base text-gray-100 sm:text-lg">
                 AFROADDIS (KYT Trading PLC) is a multi-sector enterprise driving
                 economic transformation through advanced trading, manufacturing,
-                import & export, real estate, and research — connecting Ethiopian
+                import & export, real estate, and research connecting Ethiopian
                 excellence with global standards.
               </p>
             </div>
