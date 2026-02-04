@@ -36,9 +36,7 @@ export const Chrome = ({ children }: ChromeProps) => {
     <>
       {!hideChrome && <Navbar />}
 
-      <main className={mainClasses}>
-        {children}
-      </main>
+      <main className={mainClasses}>{children}</main>
 
       {!hideChrome && (
         <footer className="mt-16 bg-red-700 text-white">
@@ -136,14 +134,26 @@ export const Chrome = ({ children }: ChromeProps) => {
                     <Mail size={16} /> <span>info@afroaddis.com</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Phone size={16} /> <span>TEL: +251 11 551 5004</span>
+                    <Phone size={16} /> <span>+251 978 787 878</span>
                   </li>
-
                   <li className="flex items-center gap-2">
-                    <Phone size={16} /> <span>TEL: +251 11 465 5222</span>
+                    <Phone size={16} /> <span>+251 970 777 879</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Phone size={16} /> <span>+251 960 777 879</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <MapPin size={16} /> <span>Addis Ababa, Ethiopia</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Link
+                      href="https://afroaddis.vercel.app/"
+                      className="hover:text-white"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      afroaddis.vercel.app
+                    </Link>
                   </li>
                 </ul>
 

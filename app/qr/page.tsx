@@ -92,12 +92,9 @@ const Page = () => {
             ].map((item) => (
               <li
                 key={item}
-                className="flex items-center justify-between border-b border-red-100 pb-3 last:border-none"
+                className="border-b border-red-100 pb-3 last:border-none"
               >
                 <span>{item}</span>
-                <span className="text-xs font-semibold uppercase text-red-700">
-                  Division
-                </span>
               </li>
             ))}
           </ul>
@@ -124,9 +121,14 @@ const Page = () => {
               Addis Ababa, Ethiopia
             </h3>
           </div>
-          <div className="border border-red-200 bg-red-50 px-4 py-2 text-xs font-semibold uppercase text-red-700">
+          <a
+            href="https://afroaddis.vercel.app/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="border border-red-200 bg-red-50 px-4 py-2 text-xs font-semibold uppercase text-red-700 hover:text-red-800"
+          >
             www.afroaddis.com
-          </div>
+          </a>
         </div>
         <div className="mt-6 grid gap-4 text-sm text-gray-700 sm:grid-cols-2">
           <div className="border border-red-100 bg-red-50/50 p-4">
