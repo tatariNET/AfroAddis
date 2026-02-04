@@ -30,12 +30,13 @@ type ChromeProps = {
 export const Chrome = ({ children }: ChromeProps) => {
   const pathname = usePathname();
   const hideChrome = pathname ? noChromeRoutes.has(pathname) : false;
+  const mainClasses = `pb-16 ${hideChrome ? "pt-6" : "pt-28"} sm:px-6 lg:px-10 overflow-x-hidden`;
 
   return (
     <>
       {!hideChrome && <Navbar />}
 
-      <main className="pb-16 pt-28 sm:px-6 lg:px-10 overflow-x-hidden">
+      <main className={mainClasses}>
         {children}
       </main>
 
